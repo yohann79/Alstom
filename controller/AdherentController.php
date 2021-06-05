@@ -88,7 +88,7 @@ class AdherentController extends Controller {
             foreach ($ids as $id) {
                 $tab = array('conditions' => "ID_ADHERENT = " . $id,'donnees' => $donnees);
                 try {
-                    $modAdherent->update($tab);
+                    $modAdherent->delete($tab);
                 } catch (Exception $ex) {
                     $e->getCode() == 42000;
                 }
